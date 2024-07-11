@@ -42,19 +42,25 @@ describe('verify DOM element using various functions', function () {
         cy.get('#milk').siblings().should('have.length', 4)
     })
 
-    it.only('to get DOM element within element using .siblings()', function () {
+    it('to get DOM element within element using .siblings()', function () {
         cy.get('.traversal-food-list').siblings().should('have.length', 5)
     })
 
-    it.only('to get DOM element within element using .parents()', function () {
+    it('to get DOM element within element using .parents()', function () {
         cy.get('#milk').parents().should('have.length', 6)
     })
 
-    it.only('to get DOM element within element using .parentsUntil()', function () {
+    it('to get DOM element within element using .parentsUntil()', function () {
         cy.get('#milk').parentsUntil('.thumbnil').should('have.length', 1)
         cy.get('#milk').parentsUntil('.container').should('have.length', 3)
     })
 
-
+    it.only('to get dom element within element using .closest()', function () {
+        cy.get('#fruits').parent()
+        cy.get('#fruits').parents().should('have.length', 6)
+        cy.get('#fruits').parents().should('match', 'body')
+        cy.get('#fruits').parents().should('match', '[class="container"]')
+        cy.get('#fruits').parents().should('match', '[class="col-sm-12"]')
+    })
 
 })
