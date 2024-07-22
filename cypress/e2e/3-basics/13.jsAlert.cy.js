@@ -6,7 +6,6 @@ describe('verify the js alert', function () {
     })
     //window-Alert()
     it('window-Alert()', function () {
-        //cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
         cy.on('window:alert', function (text) {
             expect(text).to.eq('I am a JS Alert')
             return true
@@ -38,21 +37,21 @@ describe('verify the js alert', function () {
     })
 
     //window-prompt()
-    it('window-prompt()',function(){
-        cy.window().then(function(win){
-            cy.stub(win,'prompt').returns('I am learning CYPRESS')
+    it('window-prompt()', function () {
+        cy.window().then(function (win) {
+            cy.stub(win, 'prompt').returns('I am learning CYPRESS')
             return true
         })
         cy.get('[onclick="jsPrompt()"]').click()
-        cy.get('#result').should('have.text','You entered: I am learning CYPRESS')
+        cy.get('#result').should('have.text', 'You entered: I am learning CYPRESS')
     })
 
-    it('window-prompt()',function(){
-        cy.window().then(function(win){
-            cy.stub(win,'prompt').returns('null')
+    it('window-prompt()', function () {
+        cy.window().then(function (win) {
+            cy.stub(win, 'prompt').returns('null')
             //return null
         })
         cy.get('[onclick="jsPrompt()"]').click()
-        cy.get('#result').should('have.text','You entered: null')
+        cy.get('#result').should('have.text', 'You entered: null')
     })
 })
