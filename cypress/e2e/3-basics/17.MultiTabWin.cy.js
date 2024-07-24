@@ -20,6 +20,7 @@ describe('vrify the multitab in cypress', function () {
         })
     })
 
+    //rahul shetty
     it('MULTITAB by removing target attribute', function () {
         cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
         cy.get('[id="opentab"]').first().invoke('removeAttr', 'target').click()
@@ -33,6 +34,30 @@ describe('vrify the multitab in cypress', function () {
             cy.visit(url)
             cy.url().should('contain', 'qaclickacademy')
         })
+    })
+
+    //MULTIWINDOW
+
+    it('verify the multiwindow', function () {
+        cy.visit('https://www.letskodeit.com/practice')
+        cy.window().then((win) => {
+            cy.stub(win, 'open').callsFake((url) => {
+                win.location.href = url
+            })
+        })
+        cy.get('#openwindow').click()
+        cy.url().should('contain', '/courses')
+    })
+
+    it('verify the multiwindow', function () {
+        cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
+        cy.window().then((win) => {
+            cy.stub(win, 'open').callsFake((url) => {
+                win.location.href = url
+            })
+        })
+        cy.get('[id="openwindow"]').click()
+        cy.url().should('contain', 'qaclickacademy')
     })
 
 })
