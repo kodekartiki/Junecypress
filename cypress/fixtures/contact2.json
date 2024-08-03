@@ -1,0 +1,14 @@
+{
+    "userOne": {
+        "fn": "kartiki",
+        "ln": "kode",
+        "em": "kartiki@gmail.com",
+        "msg": "cypress"
+    },
+    "userTwo": {
+        "fn": "kalyani",
+        "ln": "kode",
+        "em": "kalyani@gmail.com",
+        "msg": "playwright"
+    }
+}

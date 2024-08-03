@@ -20,7 +20,7 @@ describe('verify iframe in cypress', function () {
             cy.get('@iframe').find('a[href="products.html"]').should('have.text', 'Our Products')
         })
     })
-    it('verify iframe using fuction', function () {
+    it('verify iframe using function', function () {
         cy.visit('https://www.webdriveruniversity.com/IFrame/index.html')
         let iframeBody = cy.get('#frame').its('0.contentDocument.body').then(cy.wrap)
         iframeBody.find('a[href="products.html"]').should('have.text', 'Our Products')

@@ -27,3 +27,7 @@
 Cypress.Commands.add('getiframeBody', (css) => {
     return cy.get(css).its('0.contentDocument.body').then(cy.wrap)
  })
+
+ Cypress.Commands.add('parseXlsx', (inputFile) => {
+             return cy.task('parseXlsx' , { filePath: inputFile})
+        })

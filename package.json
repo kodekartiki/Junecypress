@@ -11,5 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^13.11.0"
+  },
+  "devDependencies": {
+    "cy-verify-downloads": "^0.2.5",
+    "node-xlsx": "^0.24.0"
   }
 }
