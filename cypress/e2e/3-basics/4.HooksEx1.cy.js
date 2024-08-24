@@ -25,7 +25,7 @@ describe('verify contact us page', function () {
 
     })
 
-    it('verify contact is page for incomplet data', function () {
+    it('verify contact is page for incomplete data', function () {
 
         cy.get('[name="first_name"]').type('kalyani')
         cy.get('[name="email"]').type('kartiki@gmail.com')

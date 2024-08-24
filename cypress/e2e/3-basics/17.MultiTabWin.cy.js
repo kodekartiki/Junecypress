@@ -1,5 +1,5 @@
 ///<reference types="cypress"/>
-describe('vrify the multitab in cypress', function () {
+describe('verify the multitab in cypress', function () {
     it('MULTITAB using href attribute', function () {
         cy.visit('https://www.letskodeit.com/practice')
         cy.get('[id="opentab"]').should('have.attr', 'href').and('include', '/courses')

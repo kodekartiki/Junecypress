@@ -1,15 +1,15 @@
 [
     {
         "userOne": {
-            "fn": "kartiki",
-            "ln": "kode",
-            "em": "kartiki@gmail.com",
+            "firstName": "kartiki",
+            "lastName": "kode",
+            "email": "kartiki@gmail.com",
             "msg": "cypress"
         },
         "userTwo": {
-            "fn": "kalyani",
-            "ln": "kode",
-            "em": "kalyani@gmail.com",
+            "firstName": "kalyani",
+            "lastName": "kode",
+            "email": "kalyani@gmail.com",
             "msg": "playwright"
         }
     }
