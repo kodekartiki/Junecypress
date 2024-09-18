@@ -1,10 +1,12 @@
 {
   "name": "dipanshu-mam-cypress",
   "version": "1.0.0",
-  "description": "",
+  "description": "��#\u0000 \u0000J\u0000u\u0000n\u0000e\u0000c\u0000y\u0000p\u0000r\u0000e\u0000s\u0000s\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "stage-env-test": "npx cypress run --spec cypress/e2e/3-basics/22.environments.cy.js --browser edge --headed stage.config.js",
+    "prod-env-test": "npx cypress run --spec cypress/e2e/3-basics/22.environments.cy.js --browser edge --headed prod.config.js"
   },
   "keywords": [],
   "author": "",
